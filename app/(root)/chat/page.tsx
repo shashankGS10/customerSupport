@@ -9,7 +9,7 @@ import { useChatStore } from "@/store/useChatStore";
 import { PreviousChats } from "@/components/PreviousChats";
 import SignOutButton from "@/components/SignOutButton";
 
-export default function InterviewPage() {
+export default function ChatPage() {
   const inputRef = useRef<HTMLInputElement | null>(null);
   const bottomRef = useRef<HTMLDivElement | null>(null);
   const [input, setInput] = useState("");
@@ -108,7 +108,7 @@ export default function InterviewPage() {
     const newId = startNewChat();
     addMessage(newId, {
       sender: "assistant",
-      text: "Welcome to your AI mock interview. Please introduce yourself briefly.",
+      text: "Welcome to your AI Smart Support. Please introduce yourself briefly.",
     });
   };
 

@@ -44,7 +44,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           return;
         }
 
-        window.location.href = "/interview";
+        window.location.href = "/chat";
       } else {
         // Sign-up flow
         const { error } = await supabase.auth.signUp({
@@ -79,11 +79,11 @@ const AuthForm = ({ type }: { type: FormType }) => {
         <div className="flex flex-row gap-2 justify-center">
           <Image src="/logo.svg" alt="PrepWise logo" height={32} width={38} />
           <h2 className="text-primary text-3xl font-semibold transition-colors duration-300">
-            ShadowAi
+            Smart Support
           </h2>
         </div>
         <h3 className="text-2xl font-semibold text-center">
-          Shadow Interviews with AI
+          Smart Support Answers with AI
         </h3>
 
         <Form {...form}>

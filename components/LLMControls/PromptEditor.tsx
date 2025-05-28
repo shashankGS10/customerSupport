@@ -28,13 +28,13 @@ export const PromptEditor: React.FC<PromptEditorProps> = ({
     setExamples,
     addVariable,
     addExample,
-    contextTitle = 'General Interview Prep',
+    contextTitle = 'Smart Support Bot',
     contextContent = 'No specific context provided...',
 }) => {
     return (
         <>
             <div className="mb-4">
-                <h4 className="font-semibold text-white mb-2">Interview Context</h4>
+                <h4 className="font-semibold text-white mb-2">Support Context</h4>
                 <div className="bg-gray-800 p-3 rounded">
                     <p className="text-sm">{contextTitle}</p>
                     <p className="text-gray-400 text-xs mt-1">

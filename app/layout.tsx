@@ -11,8 +11,8 @@ const monoSans = Mona_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "TutorAI",
-  description: "AI-powered Interview Prep",
+  title: "SmartSupport",
+  description: "AI-powered Customer Support",
 };
 export default function RootLayout({
   children,

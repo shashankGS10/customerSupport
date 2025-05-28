@@ -74,13 +74,13 @@ export async function createChatCompletion(
   const llmStats = useLLMStats.getState();
   const { context } = useContextProvider.getState();
 
-  // Prepare system prompts with interview context and AI role instructions
+  
   const systemPrompts: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [];
 
   if (context) {
     systemPrompts.push({
       role: 'system',
-      content: `Use this documentation for context during the interview:\n\n[${context.title}]\n\n${context.content.slice(
+      content: `Use this documentation for context during the AI Support:\n\n[${context.title}]\n\n${context.content.slice(
         0,
         CONTEXT_MAX_LENGTH
       )}`,
@@ -90,7 +90,7 @@ export async function createChatCompletion(
   systemPrompts.push({
     role: 'system',
     content:
-      'You are a professional AI interview coach. Ask follow-up questions based on the conversation. Provide feedback if asked. Stay within scope.',
+      'You are a professional AI Customer Support. Ask follow-up questions based on the conversation. Provide feedback if asked. Stay within scope.',
   });
 
   // Construct the messages array for the API call
